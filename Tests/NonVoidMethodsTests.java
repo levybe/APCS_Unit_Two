@@ -34,6 +34,6 @@ public class NonVoidMethodsTests {
         String[] args = null;
         System.setIn(new FileInputStream("data_files/rectangle.txt"));
         RectangleFun.main(args);
-        assertTrue(outContent.toString().contains("Perimeter = 30.0\nNew location is (-9.0, 5.0)"));
+        assertTrue(outContent.toString().contains("Perimeter = 30.0\r\nNew location is (-9.0, 5.0)"));
     }
 }
