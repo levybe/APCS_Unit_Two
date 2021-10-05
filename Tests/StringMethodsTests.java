@@ -33,7 +33,7 @@ public class StringMethodsTests {
     void NamesTest() throws IOException {
         System.setIn(new FileInputStream("data_files/names.txt"));
         Names.main(null);
-        assertTrue(outContent.toString().contains("Katherine Johnson\n16\nKJ\n1\n-1\n7\nKathnson Joherine"),
+        assertTrue(outContent.toString().contains("Katherine Johnson\r\n16\r\nKJ\r\n1\r\n-1\r\n7\r\nKathnson Joherine"),
                 "Did you use the correct arguments?");
 
     }
