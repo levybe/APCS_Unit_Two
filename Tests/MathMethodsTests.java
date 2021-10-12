@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MathMethodsTests {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -35,14 +37,14 @@ public class MathMethodsTests {
         assertEquals(19, TemperatureDifference.calculateDifference(92, 73));
     }
 
-//    @Test
-//    void FindThePowerTest() throws IOException {
-//        String[] args = null;
-//        System.setIn(new FileInputStream("data_files/powers.txt"));
-//        FindThePower.main(args);
-//        assertTrue(outContent.toString().contains("5^3 = 125"));
-//
-//    }
+    @Test
+    void FindThePowerTest() throws IOException {
+        String[] args = null;
+        System.setIn(new FileInputStream("data_files/powers.txt"));
+        FindThePower.main(args);
+        assertTrue(outContent.toString().contains("5^3 = 125"));
+
+    }
 
 //    @Test
 //    void DistanceTests() {
